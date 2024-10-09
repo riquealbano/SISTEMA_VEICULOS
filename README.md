@@ -6,8 +6,6 @@ Projeto a fim de estudos, desenvolvendo conhecimentos sobre Herança
 
 ### 📋 Pré-requisitos
 
-De que coisas você precisa para instalar o software e como instalá-lo?
-
 Qualquer computador e o arquivo do software para download
 
 ### 🔧 Instalação
