@@ -82,6 +82,7 @@ class Caminhao extends Automotor {
     }
 }
 
+// nova super Classe para os 2 ultimos itens
 class VeiculoRadical{
 	private String modelo;
 	private String marca;
@@ -94,14 +95,15 @@ class VeiculoRadical{
 	this.cor = cor;
 	this.anoFabricacao = anoFabricacao;
 	}
-	
+
+		// Instancio mais um INSERT apenas para essa super Classe
 		public String InsertRadical() {
 	        return "Informações do Veículo - Modelo: " + modelo + ", Marca: " + marca + ", Cor: " + cor +
 	        		", Ano de Fabricação: " + anoFabricacao + ".";
 	    }
 }
 
-// Classe para bicicletas
+// Classe para bicicletas saindo de VeiculoRadical
 class Bicicleta extends VeiculoRadical{
     private String material; // Material da bicicleta
     private int quantidadeMarchas; // Quantidade de marchas da bicicleta
@@ -115,6 +117,7 @@ class Bicicleta extends VeiculoRadical{
         this.amortecedor = amortecedor;
     }
 
+	// Utilizando o INSERT que foi criado
     public String InsertRadical() {
         return super.InsertRadical()+ 
         		"\nBicicleta - Material: " + material + ", Quantidade de Marchas: " + quantidadeMarchas + ", Possui Amortecedor: " +
@@ -122,7 +125,7 @@ class Bicicleta extends VeiculoRadical{
     }
 }
 
-// Classe para skates
+// Classe para skates saindo de VeiculoRadical
 class Skate extends VeiculoRadical{
     private String tipoRodas; // Tipo das rodas do skate
 
@@ -131,17 +134,18 @@ class Skate extends VeiculoRadical{
         super(modelo, marca, cor, anoFabricacao);
         this.tipoRodas = tipoRodas;
     }
+
+	// Utilizando o INSERT que foi criado
     public String InsertRadical() {
         return super.InsertRadical()+
         		"\nSkate - Tipo de Rodas: " + tipoRodas + ".";
     }
 }
-public class Main{
-    
-// Classe principal para testar as classes
 
+// Classe Principal onde vamos testar todas as classes
+public class Main{
     public static void main(String[] args) {
-        // Criação de um automóvel
+        // Criação de um automóvel doméstico
         AutomovelDomestico carro = new AutomovelDomestico("Fusca", 1975, "Volkswagen", "azul", 100000, 4, "ABS", true);
         System.out.println(carro.gerarInsert());
 
